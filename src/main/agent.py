@@ -3,6 +3,7 @@ from src.tool.CancerDBTool import cancer_db_tool
 from src.tool.DiabetesDBTool import diabetes_db_tool
 from src.tool.HeartDiseaseDBTool import heart_disease_db_tool
 from src.tool.MedicalWebSearchTool import web_search as web_search_tool
+import settings
 
 agent = Agent(
     name = 'MedicalAgent',
@@ -26,7 +27,7 @@ agent = Agent(
     If you do not have enough information, you can conduct a web search to find the necessary information.
     Be sure to format your responses clearly and concisely.
     """,
-    model=OpenAIChatCompletionsModel(model=MODEL_NAME, openai_client=client),
+    model=OpenAIChatCompletionsModel(model=settings.MODEL_NAME, openai_client=settings.openai_client),
     tools=[
         diabetes_db_tool,
         cancer_db_tool,

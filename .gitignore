@@ -1,4 +1,6 @@
 env
 .logfire
+.venv
 .env
 __pycache__
+.gitignore
