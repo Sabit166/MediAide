@@ -1,0 +1,4 @@
+env
+.logfire
+.env
+__pycache__
